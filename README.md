@@ -3,6 +3,7 @@
 [![PyPI](https://img.shields.io/pypi/v/markitdown.svg)](https://pypi.org/project/markitdown/)
 ![PyPI - Downloads](https://img.shields.io/pypi/dd/markitdown)
 [![Built by AutoGen Team](https://img.shields.io/badge/Built%20by-AutoGen%20Team-blue)](https://github.com/microsoft/autogen)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/markitdown)
 
 > [!TIP]
 > MarkItDown now offers an MCP (Model Context Protocol) server for integration with LLM applications like Claude Desktop. See [markitdown-mcp](https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp) for more information.
@@ -28,6 +29,23 @@ MarkItDown currently supports the conversion from:
 - ZIP files (iterates over contents)
 - Youtube URLs
 - EPubs
+
+## 部署
+
+### Railway部署
+
+您可以使用Railway一键部署MarkItDown服务：
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/markitdown)
+
+在Railway上部署时，您需要配置以下环境变量：
+
+- `OPENROUTER_API_KEY`: OpenRouter API密钥
+- `OPENROUTER_MODEL`: OpenRouter模型名称（默认为openai/gpt-4-turbo）
+- `AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT`: Azure Document Intelligence服务端点
+- `AZURE_API_KEY`: Azure API密钥
+
+详细的部署指南请参考[Railway部署文档](./RAILWAY_DEPLOYMENT.md)。
 - ... and more!
 
 ## Why Markdown?

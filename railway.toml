@@ -1,0 +1,18 @@
+# Railway 配置文件
+# 此文件定义了Railway部署的配置
+
+[build]
+# 使用Dockerfile构建
+builder = "dockerfile"
+
+[deploy]
+# 启动命令
+startCommand = "python app.py"
+# 健康检查路径
+healthcheckPath = "/"
+# 健康检查超时时间（秒）
+healthcheckTimeout = 10
+
+# 端口映射
+[deploy.ports]
+http = "5000"

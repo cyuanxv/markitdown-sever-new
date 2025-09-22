@@ -1,0 +1,37 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "dockerfile",
+    "watchPatterns": [
+      "**/*.py",
+      "Dockerfile",
+      "requirements.txt"
+    ]
+  },
+  "deploy": {
+    "startCommand": "python app.py",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 10,
+    "restartPolicyType": "on_failure",
+    "restartPolicyMaxRetries": 3
+  },
+  "variables": {
+    "OPENROUTER_API_KEY": {
+      "required": true,
+      "description": "OpenRouter API密钥"
+    },
+    "OPENROUTER_MODEL": {
+      "required": false,
+      "description": "OpenRouter模型名称",
+      "default": "openai/gpt-4-turbo"
+    },
+    "AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT": {
+      "required": true,
+      "description": "Azure Document Intelligence服务端点"
+    },
+    "AZURE_API_KEY": {
+      "required": true,
+      "description": "Azure API密钥"
+    }
+  }
+}
