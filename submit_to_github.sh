@@ -26,6 +26,8 @@ git commit -m "初始提交 markitdown 项目"
 
 # 推送到GitHub
 echo "推送到GitHub..."
-git push -u origin master
+# 获取当前分支名称
+CURRENT_BRANCH=$(git branch --show-current)
+git push -u origin "$CURRENT_BRANCH"
 
 echo "完成！项目已成功提交到GitHub仓库。"
